@@ -1,0 +1,35 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid2\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww20960\viewh21260\viewkind0
+\deftab720
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f0\b\fs24 \cf0 Converting sequencing BAM files to Excel data (updated 6/8/2021)
+\f1\b0 \
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\ri0\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	1.	}Place .bam and .bam.bai files onto a PC with Matlab installed.\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\ri0\partightenfactor0
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}The .bam and .bambai files are located in the \'93Alignment\'94 folder: \\Data\\Intensities\\BaseCalls\\Alignment.\
+{\listtext	\uc0\u8259 	}Move these files into the \'93Illumina scripts\'94 folder in the Documents\\Matlab directory.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\ri0\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	2.	}Create .mat files for all 24 samples in Matlab\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\ri0\partightenfactor0
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Open Matlab and make sure the Current Directory is set to the scripts folder and that the sequencingcompile.m script is listed at this level.\
+{\listtext	\uc0\u8259 	}Run the script for each sample by typing (exactly) in the Command Window: sequencingcompile(\'91YOURSAMPLE1.bam\'92); and hitting return.\
+{\listtext	\uc0\u8259 	}After a delay (up to 20 min), the computer will beep and the script will output a ANS file in the Workspace, which contains coordinates for all reads.\
+{\listtext	\uc0\u8259 	}Rename ANS to the corresponding sample name, then save as YOURSAMPLE1 selecting the .mat file format. Matlab files cannot have spaces or hyphens- in their names, so use underscores_.\
+{\listtext	\uc0\u8259 	}Clear the Workspace by typing: clear all in the Command Window.\
+{\listtext	\uc0\u8259 	}Repeat until you have .mat files for all 24 samples. \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\ri0\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	3.	}Create a single Excel file with read counts in Matlab\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\ri0\partightenfactor0
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Make sure the sequencingcompile2.m script and all 24 .mat files are listed in the Current Directory.\
+{\listtext	\uc0\u8259 	}Load the 24 samples into the Workspace by double-clicking each of them.\
+{\listtext	\uc0\u8259 	}Type sequencingcompile2(); into the Command Window.\
+{\listtext	\uc0\u8259 	}The script will output an Excel file listing the read counts in 1 kb bins for all 24 samples.\
+}
